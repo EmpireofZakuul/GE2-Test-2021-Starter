@@ -1,5 +1,18 @@
 # Game Engines 2 Lab Test 2021
 
+<html>
+<body>
+<p><b>Name:</b>Marcus Gleeson<br>
+<b>Student Number:</b>D19124543<br>
+<b>Class Group:</b>DT508
+</P>
+<p>All work related to the lab test is on the MarcusBranch.</p>
+<p>I have two separate scenes in my project, the sample scene and final scene. I was having problems with the sample scene. But I fixed the problems in the sample scene and continued to work on the lab test in that scene. <b>So the completed lab test is in the sample scene. </b></p>
+
+</body>
+</html>
+
+
 - This is an open book test
 - No collaboration permitted
 - Fork this git repository
@@ -28,3 +41,5 @@ Marking Scheme
 | Jazz (any other cool thing you want to implement to enhance the simulation) | 20 marks |
 
 Submit the url to your repo before 5pm today through [this link](https://docs.google.com/forms/d/e/1FAIpQLSfBxtMyunljtU-JyiUt80HjvzqQXuFgJWXIBX5x3lCJcp7Wbg/viewform) 
+
+
