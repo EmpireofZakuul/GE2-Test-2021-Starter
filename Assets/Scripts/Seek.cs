@@ -9,7 +9,18 @@ public class Seek : SteeringBehaviour
     public GameObject targetGameObject = null;
 
     public Vector3 target = Vector3.zero;
+    public AudioSource AudioSource;
 
+    public void OnEnable()
+    {
+        InvokeRepeating("Sound", 1f, 2f);
+        AudioSource.GetComponent<AudioSource>();
+    }
+
+    void Sound()
+    {
+        AudioSource.Play();
+    }
     public void OnDrawGizmos()
     {
         if (isActiveAndEnabled && Application.isPlaying)

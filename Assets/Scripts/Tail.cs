@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tail : MonoBehaviour
 {
     public float tailWagRate;
-    public float tailWagAmplitude;
+    public float tailRadius;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +16,8 @@ public class Tail : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // transform.localEulerAngles = transform.localEulerAngles(Mathf.Sin(Time.deltaTime * tailWagRate) * tailWagAmplitude);
+        transform.localRotation = Quaternion.RotateTowards(transform.localRotation, Quaternion.Euler(0, tailRadius, 0), tailWagRate);
+        if (transform.localRotation == Quaternion.Euler(0, tailRadius, 0)) tailRadius = -tailRadius;
+        // transform.localEulerAngles = transform.localEulerAngles(Mathf.Sin(Time.deltaTime * tailWagRate) * tailWagAmplitude);
     }
 }

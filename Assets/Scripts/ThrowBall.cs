@@ -27,6 +27,8 @@ public class ThrowBall : MonoBehaviour
     }
     public void Shoot()
     {
+        dog.GetComponentInChildren<Seek>().enabled = true;
+        dog.GetComponentInChildren<Arrive>().enabled = false;
         GameObject gren = Instantiate(ball, Hand.position, Hand.rotation) as GameObject;
         gren.GetComponent<Rigidbody>().AddForce(Hand.forward * speed, ForceMode.Impulse);
         dog.GetComponentInChildren<Seek>().targetGameObject = gren;
