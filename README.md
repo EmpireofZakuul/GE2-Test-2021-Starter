@@ -2,40 +2,27 @@
 
 <html>
 <body>
-<h2> Important</h2>
+<h1> Important</h1>
 <p><b>Name:</b>Marcus Gleeson<br>
 <b>Student Number:</b>D19124543<br>
 <b>Class Group:</b>DT508
 </P>
-<h2> Important Information</h2>
+<h1> Important Information</h1>
 <p><b>All work related to the lab test is on the MarcusBranch.</p>
-<p>I have two separate scenes in my project, the sample scene and final scene. So the completed lab test is in the sample scene. </b></p>
+<p>I have two separate scenes in my project, the sample scene and final scene. The completed lab test is in the sample scene. </b></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
 <br>
 
-<p>
-
-</p>
-<p>
-
-</p>
-<p>
-
-</p>
-<p>
-
-</p>
-<p>
-
-</p>
-<p>
-
-</p>
-<p>
-
-</p>
 
 </body>
 </html>
