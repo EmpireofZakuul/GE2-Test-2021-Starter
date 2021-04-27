@@ -10,7 +10,9 @@ public class ThrowBall : MonoBehaviour
     public float speed = 20;
     public Transform Hand;
     public GameObject dog;
-    //public Seek seek;
+    public Transform player;
+    public Tail Tail;
+ 
 
     public void Start()
     {
@@ -19,19 +21,35 @@ public class ThrowBall : MonoBehaviour
     // Start is called before the first frame update
     void Update()
     {
+        
+
+        if (BallCheck.ballThrown == false)
+        {
+
+
             if (Input.GetKeyDown(KeyCode.Space) && Time.time >= nextTimeToFire)
             {
                 nextTimeToFire = Time.time + 1 / fireRate;
                 Shoot();
+                BallCheck.ballThrown = true;
             }
+        }
+
+
+     
     }
     public void Shoot()
     {
-        dog.GetComponentInChildren<Seek>().enabled = true;
-        dog.GetComponentInChildren<Arrive>().enabled = false;
+       // dog.GetComponentInChildren<Seek>().enabled = true;
+        //dog.GetComponentInChildren<Arrive>().enabled = false;
         GameObject gren = Instantiate(ball, Hand.position, Hand.rotation) as GameObject;
         gren.GetComponent<Rigidbody>().AddForce(Hand.forward * speed, ForceMode.Impulse);
         dog.GetComponentInChildren<Seek>().targetGameObject = gren;
-        
+        Tail.tailWagRate = 5;
+      
+
+        DogState.state = DogState.Dog.seek;
     }
+
+
 }

@@ -13,6 +13,8 @@ public class Arrive : SteeringBehaviour
     public GameObject targetGameObject = null;
     public ParentBall parent;
     public Boid myBoid;
+    public Tail Tail;
+    public ThrowBall throwBall;
 
     public override Vector3 Calculate()
     {
@@ -28,19 +30,18 @@ public class Arrive : SteeringBehaviour
 
         if(Vector3.Distance(player.transform.position, dog.transform.position) <= 10)
         {
-            dog.GetComponentInChildren<Arrive>().enabled = false;
-
-            //Vector3 stop = new Vector3.zero;
-            //parent.myCollider.transform.SetParent(null);
-            //ball = dog.GetComponent<Seek>().targetGameObject.transform;
-            //ball.SetParent(null);
-
+            DogState.state = DogState.Dog.wait;
+            DogState.state = DogState.Dog.drop;
+            //if(throwBall.counter ==1)
+           //{
+               // throwBall.counter = 0;
+            //}
             boid.velocity = Vector3.zero;
             boid.acceleration = Vector3.zero;
             boid.force = Vector3.zero;
-         
-          
-
+            Tail.tailWagRate = 10;
+            
         }
+     
     }
 }

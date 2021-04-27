@@ -8,6 +8,8 @@ public class ParentBall : MonoBehaviour
     public GameObject dog;
     public bool unParented = false;
     public Collider myCollider;
+    public Transform parentObject;
+    public GameObject ball;
 
 
     public void Start()
@@ -20,22 +22,12 @@ public class ParentBall : MonoBehaviour
         if (myCollider.gameObject.tag == "Ball" && !hasBall)
         {
 
-            myCollider.transform.parent = dog.transform;
+           myCollider.transform.parent = dog.transform;
             hasBall = true;
-            dog.GetComponentInChildren<Arrive>().enabled = true;
-            dog.GetComponentInChildren<Seek>().enabled = false;
+            DogState.state = DogState.Dog.fetch;
         }
       
     }
-    public void Update()
-    {
-        if ( unParented)
-        {
-           // myCollider.transform.parent = null;
-            myCollider.transform.SetParent(null);
-            unParented = false;
-            hasBall = false;
-        }
-    }
+
 
 }

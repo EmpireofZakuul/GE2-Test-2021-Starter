@@ -43,7 +43,6 @@ public class Seek : SteeringBehaviour
     {
         if (targetGameObject != null)
         {
-            //target = targetGameObject.transform.position;
             target = new Vector3(targetGameObject.transform.position.x, 0f, targetGameObject.transform.position.z);
         }
 
