@@ -590,9 +590,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 1
-  grenade: {fileID: 3627371103750170129, guid: b471fff3b0213bb4882085e357ee2c4e, type: 3}
+  ball: {fileID: 3627371103750170129, guid: b471fff3b0213bb4882085e357ee2c4e, type: 3}
   speed: 20
   Hand: {fileID: 1672720392}
+  dog: {fileID: 1503941570}
 --- !u!114 &963194231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,11 +645,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181318721}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df9abdc16a6d6624d9b99b72bafa2fee, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f38fd13b49304d47b1899947fe70af9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tailWagRate: 0
+  tailWagAmplitude: 0
 --- !u!1 &1296423582
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +661,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1296423583}
+  - component: {fileID: 1296423585}
+  - component: {fileID: 1296423584}
   m_Layer: 0
   m_Name: ballAttach
   m_TagString: Untagged
@@ -679,6 +684,33 @@ Transform:
   m_Father: {fileID: 1461995659}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1296423584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296423582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0.4435082}
+  m_Center: {x: 0, y: 0, z: 0.2782459}
+--- !u!114 &1296423585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1296423582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 617fe8a4ae703164c97200240ac492b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasBall: 0
+  dog: {fileID: 1296423582}
 --- !u!1 &1461995654
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,6 +916,7 @@ GameObject:
   - component: {fileID: 1503941577}
   - component: {fileID: 1503941572}
   - component: {fileID: 1503941571}
+  - component: {fileID: 1503941573}
   m_Layer: 0
   m_Name: dog
   m_TagString: Untagged
@@ -898,7 +931,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503941570}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d60a1b42aa563b4fab355ebfdf12f6c, type: 3}
   m_Name: 
@@ -907,7 +940,7 @@ MonoBehaviour:
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
-  slowingDistance: 20
+  slowingDistance: 15
   targetGameObject: {fileID: 963194225}
 --- !u!114 &1503941572
 MonoBehaviour:
@@ -929,6 +962,23 @@ MonoBehaviour:
   banking: 0.1
   maxSpeed: 5
   maxForce: 10
+--- !u!114 &1503941573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1503941570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fadc7a9e54d78c4a94623a043132b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weight: 1
+  force: {x: 0, y: 0, z: 0}
+  boid: {fileID: 0}
+  targetGameObject: {fileID: 963194225}
+  target: {x: 0, y: 0, z: 0}
 --- !u!4 &1503941576
 Transform:
   m_ObjectHideFlags: 0
