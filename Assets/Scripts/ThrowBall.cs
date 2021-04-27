@@ -6,11 +6,16 @@ public class ThrowBall : MonoBehaviour
 {
     public float fireRate = 15f;
     private float nextTimeToFire = 0f;
-    public GameObject grenade;
+    public GameObject ball;
     public float speed = 20;
     public Transform Hand;
- 
+    public GameObject dog;
+    //public Seek seek;
 
+    public void Start()
+    {
+        dog = GameObject.Find("dog");
+    }
     // Start is called before the first frame update
     void Update()
     {
@@ -22,7 +27,8 @@ public class ThrowBall : MonoBehaviour
     }
     public void Shoot()
     {
-        GameObject gren = Instantiate(grenade, Hand.position, Hand.rotation) as GameObject;
+        GameObject gren = Instantiate(ball, Hand.position, Hand.rotation) as GameObject;
         gren.GetComponent<Rigidbody>().AddForce(Hand.forward * speed, ForceMode.Impulse);
+        dog.GetComponentInChildren<Seek>().targetGameObject = ball;
     }
 }
