@@ -2,10 +2,12 @@
 
 <html>
 <body>
+<h2> Important</h2>
 <p><b>Name:</b>Marcus Gleeson<br>
 <b>Student Number:</b>D19124543<br>
 <b>Class Group:</b>DT508
 </P>
+<h2> Important Information</h2>
 <p><b>All work related to the lab test is on the MarcusBranch.</p>
 <p>I have two separate scenes in my project, the sample scene and final scene. I was having problems with the sample scene. But I fixed the problems in the sample scene and continued to work on the lab test in that scene. So the completed lab test is in the sample scene. </b></p>
 <p>
