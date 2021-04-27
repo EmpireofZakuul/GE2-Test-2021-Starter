@@ -1,4 +1,4 @@
-# Game Engines 2 Lab Test 2021
+
 
 <html>
 <body>
@@ -9,7 +9,12 @@
 </P>
 <h2> Important Information</h2>
 <p><b>All work related to the lab test is on the MarcusBranch.</p>
-<p>I have two separate scenes in my project, the sample scene and final scene. I was having problems with the sample scene. But I fixed the problems in the sample scene and continued to work on the lab test in that scene. So the completed lab test is in the sample scene. </b></p>
+<p>I have two separate scenes in my project, the sample scene and final scene. So the completed lab test is in the sample scene. </b></p>
+<br>
+<br>
+<br>
+<br>
+
 <p>
 
 </p>
@@ -31,10 +36,12 @@
 <p>
 
 </p>
+
 </body>
 </html>
 
 
+# Game Engines 2 Lab Test 2021
 - This is an open book test
 - No collaboration permitted
 - Fork this git repository
